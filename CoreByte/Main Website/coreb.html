@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoreByte Studios - Next-Gen Game Development</title>
+    <link rel="stylesheet" href="coreb.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+                <span class="brand-text">CoreByte Studios</span>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#games" class="nav-link">Games</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button class="btn btn-primary desktop-cta" onclick="scrollToSection('contact')">Get In Touch</button>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero" class="mobile-link">Home</a>
+            <a href="#games" class="mobile-link">Games</a>
+            <a href="#features" class="mobile-link">Features</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <button class="btn btn-primary" onclick="scrollToSection('contact')">Get In Touch</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="badge">Next-Gen Gaming</div>
+            <h1 class="hero-title animate-fade-in-up">Crafting Immersive Gaming Experiences</h1>
+            <p class="hero-subtitle animate-fade-in-up">We build cutting-edge games that push the boundaries of interactive entertainment and storytelling</p>
+            <div class="hero-buttons animate-fade-in-up">
+                <button class="btn btn-primary btn-lg" onclick="scrollToSection('games')">
+                    Explore Games
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+                <button class="btn btn-outline btn-lg" onclick="scrollToSection('about')">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-fade-in">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Games Published</div>
+                </div>
+                <div class="stat-item animate-fade-in" style="animation-delay: 0.1s">
+                    <div class="stat-value">10M+</div>
+                    <div class="stat-label">Active Players</div>
+                </div>
+                <div class="stat-item animate-fade-in" style="animation-delay: 0.2s">
+                    <div class="stat-value">150+</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+                <div class="stat-item animate-fade-in" style="animation-delay: 0.3s">
+                    <div class="stat-value">25+</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Our Games</div>
+                <h2 class="section-title">Featured Titles</h2>
+                <p class="section-subtitle">Experience our latest and greatest gaming adventures</p>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card hover-lift animate-fade-in-up">
+                    <div class="game-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="game-badge">RPG</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Eternal Realms</h3>
+                        <p class="game-description">An epic fantasy RPG with stunning visuals and immersive storytelling. Explore vast worlds and forge your destiny.</p>
+                        <div class="game-tags">
+                            <span class="tag">Multiplayer</span>
+                            <span class="tag">Open World</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card hover-lift animate-fade-in-up" style="animation-delay: 0.1s">
+                    <div class="game-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="game-badge">Action</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Cyber Assault</h3>
+                        <p class="game-description">Fast-paced cyberpunk shooter with competitive multiplayer. Master futuristic weapons and dominate the battlefield.</p>
+                        <div class="game-tags">
+                            <span class="tag">FPS</span>
+                            <span class="tag">Competitive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card hover-lift animate-fade-in-up" style="animation-delay: 0.2s">
+                    <div class="game-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="game-badge">Strategy</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Galactic Empire</h3>
+                        <p class="game-description">Build and command your space empire. Conquer galaxies through strategic warfare and diplomatic alliances.</p>
+                        <div class="game-tags">
+                            <span class="tag">4X</span>
+                            <span class="tag">Sci-Fi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Technology</div>
+                <h2 class="section-title">Game Development Excellence</h2>
+                <p class="section-subtitle">Powered by cutting-edge technology and creative innovation</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card animate-fade-in-up">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Advanced Engine</h3>
+                    <p class="feature-description">Proprietary game engine delivering stunning graphics and smooth performance across all platforms</p>
+                </div>
+
+                <div class="feature-card animate-fade-in-up" style="animation-delay: 0.1s">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Cross-Platform</h3>
+                    <p class="feature-description">Play anywhere, anytime. Seamless gaming experience across PC, console, and mobile devices</p>
+                </div>
+
+                <div class="feature-card animate-fade-in-up" style="animation-delay: 0.2s">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Multiplayer Focus</h3>
+                    <p class="feature-description">Built for community. Robust multiplayer infrastructure supporting millions of concurrent players</p>
+                </div>
+
+                <div class="feature-card animate-fade-in-up" style="animation-delay: 0.3s">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI & Physics</h3>
+                    <p class="feature-description">Revolutionary AI systems and realistic physics engines creating believable, dynamic worlds</p>
+                </div>
+
+                <div class="feature-card animate-fade-in-up" style="animation-delay: 0.4s">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Regular Updates</h3>
+                    <p class="feature-description">Continuous content updates, events, and expansions keeping games fresh and exciting</p>
+                </div>
+
+                <div class="feature-card animate-fade-in-up" style="animation-delay: 0.5s">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Security First</h3>
+                    <p class="feature-description">Advanced anti-cheat systems and secure infrastructure ensuring fair play for everyone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">About Us</div>
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-subtitle">Passionate game developers creating unforgettable experiences</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text animate-slide-in-left">
+                    <h3>Our Mission</h3>
+                    <p>At CoreByte Studios, we believe games are more than entertainment—they're experiences that bring people together, tell compelling stories, and push the boundaries of what's possible.</p>
+                    <p>Founded in 2015, our team of 150+ talented developers, artists, and designers has published over 50 games played by millions worldwide. We combine cutting-edge technology with creative storytelling to deliver games that resonate with players of all ages.</p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <div class="value-icon">🎮</div>
+                            <div>
+                                <h4>Player-First</h4>
+                                <p>Every decision prioritizes player experience and satisfaction</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">🚀</div>
+                            <div>
+                                <h4>Innovation</h4>
+                                <p>Constantly pushing technological and creative boundaries</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">🤝</div>
+                            <div>
+                                <h4>Community</h4>
+                                <p>Building strong relationships with our gaming community</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image animate-slide-in-right">
+                    <div class="image-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="12" x2="2" y2="12"></line>
+                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                            <line x1="6" y1="16" x2="6.01" y2="16"></line>
+                            <line x1="10" y1="16" x2="10.01" y2="16"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Get In Touch</div>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Let's discuss your gaming project or partnership opportunities</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@corebytestudios.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Seattle, WA 98101</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                    <span class="brand-text">CoreByte Studios</span>
+                </div>
+                <p class="footer-copyright">© 2025 CoreByte Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="coreb.js"></script>
+</body>
+</html>
