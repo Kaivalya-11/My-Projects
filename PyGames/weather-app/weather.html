@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App (JS)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 360px;
+            background: #020617;
+            border-radius: 18px;
+            border: 1px solid #1f2937;
+            padding: 20px 22px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid #374151;
+            background: #020617;
+            color: #e5e7eb;
+            font-size: 13px;
+            outline: none;
+        }
+
+        input[type="text"]::placeholder {
+            color: #6b7280;
+        }
+
+        button {
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: none;
+            background: #22c55e;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+
+        .result {
+            margin-top: 10px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: #020617;
+            border: 1px dashed #1f2937;
+            font-size: 13px;
+            white-space: pre-line;
+            min-height: 70px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            margin-bottom: 4px;
+            background: #0f172a;
+            color: #a5b4fc;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Weather App</h2>
+    <div class="subtitle">Check current weather using OpenWeather API</div>
+
+    <div class="input-row">
+        <input id="city" type="text" placeholder="Enter city, e.g. Mumbai">
+        <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div class="result" id="result">
+        <span class="pill">Tip</span>
+        Type a city name and press <b>Search</b>.
+    </div>
+</div>
+
+<script>
+    async function getWeather() {
+        const cityInput = document.getElementById("city");
+        const resultDiv = document.getElementById("result");
+        const city = cityInput.value.trim();
+
+        if (!city) {
+            resultDiv.textContent = "Please enter a city name.";
+            return;
+        }
+
+        const apiKey = "137d0df46e535b17c2008db2d001346e";
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
+
+        resultDiv.textContent = "Loading...";
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+
+            if (data.cod !== 200) {
+                resultDiv.textContent = "Error: " + (data.message || "Could not fetch weather.");
+                return;
+            }
+
+            const temp = data.main.temp;
+            const feels = data.main.feels_like;
+            const hum = data.main.humidity;
+            const desc = data.weather[0].description;
+            const wind = data.wind.speed;
+
+            resultDiv.textContent =
+                `City: ${data.name}\n` +
+                `Temperature: ${temp} °C\n` +
+                `Feels like: ${feels} °C\n` +
+                `Humidity: ${hum}%\n` +
+                `Wind: ${wind} m/s\n` +
+                `Condition: ${desc}`;
+        } catch (err) {
+    resultDiv.textContent = "JS error: " + err;
+}
+    }
+</script>
+</body>
+</html>
